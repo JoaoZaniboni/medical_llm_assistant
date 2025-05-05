@@ -3,13 +3,17 @@ import './App.css';
 
 function App() {
   const [query, setQuery] = useState('');
-  const [response, setResponse] = useState('');
+  const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!query.trim()) return;
+
+    const newUserMessage = { sender: 'user', text: query };
+    setMessages((prev) => [...prev, newUserMessage]);
     setIsLoading(true);
-    
+
     try {
       const res = await fetch('http://localhost:8000/api/chat', {
         method: 'POST',
@@ -18,37 +22,46 @@ function App() {
         },
         body: JSON.stringify({ query }),
       });
-      
+
       const data = await res.json();
-      setResponse(data.response);
+      const newBotMessage = { sender: 'bot', text: data.response };
+      setMessages((prev) => [...prev, newBotMessage]);
     } catch (error) {
-      setResponse('Erro ao conectar com o servidor');
       console.error(error);
+      const errorMessage = { sender: 'bot', text: 'Erro ao conectar com o servidor.' };
+      setMessages((prev) => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
+      setQuery('');
     }
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Chat com Agentes</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Digite sua mensagem..."
-            disabled={isLoading}
-          />
-          <button type="submit" disabled={isLoading}>
-            {isLoading ? 'Enviando...' : 'Enviar'}
-          </button>
-        </form>
-        <div className="response-box">
-          {response || 'A resposta aparecerá aqui...'}
-        </div>
-      </header>
+    <div className="app-container">
+      <header className="header">Dr. Chat</header>
+      <div className="chat-container">
+        {messages.map((msg, index) => (
+          <div
+            key={index}
+            className={`message ${msg.sender === 'user' ? 'user-message' : 'bot-message'}`}
+          >
+            {msg.text}
+          </div>
+        ))}
+        {isLoading && <div className="message bot-message">Digitando...</div>}
+      </div>
+      <form className="input-container" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Digite sua mensagem..."
+          disabled={isLoading}
+        />
+        <button type="submit" disabled={isLoading || !query.trim()}>
+          Enviar
+        </button>
+      </form>
     </div>
   );
 }
