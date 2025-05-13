@@ -1,0 +1,121 @@
+### Loading the embedder
+from pydantic import BaseModel, Field
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
+from llama_index.core import ServiceContext
+from llama_index.core import ServiceContext
+from llama_index.core import VectorStoreIndex
+from llama_index.core import StorageContext
+from llama_index.vector_stores.qdrant import QdrantVectorStore
+# from llama_index.embeddings import LangchainEmbedding
+from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+import qdrant_client
+import yaml
+import os
+from llama_index.core import Settings
+from llama_index.core import PromptTemplate
+from rag.pydantic_classes import Response, ResponseText
+from llama_index.core.node_parser import SentenceWindowNodeParser
+from llama_index.core.postprocessor import MetadataReplacementPostProcessor
+from llama_index.core.postprocessor import SentenceTransformerRerank
+
+from dotenv import load_dotenv
+load_dotenv()
+
+new_summary_tmpl_str = (
+"Informações de contexto estão abaixo.\n"
+"---------------------\n"
+"{context_str}\n"
+"---------------------\n"
+"Dadas as informações de contexto e sem utilizar conhecimento prévio, "
+"gere uma resposta para a query, em português do Brasil, e com a ortografia correta."
+"Se a resposta não puder ser formada estritamente usando o contexto, diga educadamente apenas que você \
+não consegue responder a pergunta."
+"Responda diretamente com a resposta da query, sem prolongar mais que o necessário.\n"
+"Consulta: {query_str}\n"
+"Resposta: "
+)
+
+class RAG:
+    def __init__(self, llm):
+        self.llm = llm  # ollama llm
+        self.aclient=qdrant_client.AsyncQdrantClient(url=os.getenv("qdrant_url"))
+        self.client = qdrant_client.QdrantClient(url=os.getenv("qdrant_url"))
+        self.qdrant_vector_store = QdrantVectorStore(
+            client=self.client, aclient=self.aclient, collection_name=os.getenv('collection_name'),
+        )
+        self.embed_model = HuggingFaceEmbeddings(model_name=os.getenv('embedding_model'))
+        self.node_parser = SentenceWindowNodeParser.from_defaults(
+            window_size=6,
+            window_metadata_key="window",
+            original_text_metadata_key="original_text",
+        )
+
+        self.postproc = MetadataReplacementPostProcessor(
+            target_metadata_key="window"
+        )
+        self.storage_context = StorageContext.from_defaults(vector_store=self.qdrant_vector_store)
+        self.service_context = ServiceContext.from_defaults(
+            llm= self.llm, embed_model=self.embed_model, chunk_size=int(os.getenv("chunk_size")),
+            chunk_overlap=50
+        )
+        self.index = None
+        if self.client.collection_exists('digitro'):
+            self.index = VectorStoreIndex.from_vector_store(vector_store=self.qdrant_vector_store,
+                                                service_context=self.service_context,
+                                                storage_context=self.storage_context, )
+        
+        
+        # if self.index:
+        #     self.index = None
+        self.define_settings()
+
+
+        self.new_summary_tmpl = PromptTemplate(new_summary_tmpl_str)
+    
+    def define_settings(self):
+         Settings.llm = self.llm
+         Settings.embed_model = self.embed_model
+    
+    def ingest(self):
+        print("Indexing data...")
+        reader = SimpleDirectoryReader(os.getenv("data_path"))
+        documents = reader.load_data()
+        nodes = self.node_parser.get_nodes_from_documents(documents)
+
+        self.index = VectorStoreIndex(
+            nodes, storage_context=self.storage_context, service_context=self.service_context, show_progress=True
+        )
+        self.index.set_index_id("principe_index")
+        response = ResponseText(response="Data inserido com sucesso"
+)
+        return response
+    
+    def create_engine(self, index, similarity_top_k, change_prompt = True):
+        self.rerank = SentenceTransformerRerank(
+            top_n=similarity_top_k//2, model="BAAI/bge-reranker-base"
+        )
+
+        query_engine = index.as_query_engine(similarity_top_k=similarity_top_k, 
+                                            output=Response, response_mode="tree_summarize",  node_postprocessors = [self.postproc,  self.rerank],
+                                        verbose=True)
+        if change_prompt:
+            query_engine.update_prompts(
+                {"response_synthesizer:summary_template": self.new_summary_tmpl}
+            )
+        return query_engine
+
+    def query(self, query):
+        if not self.index:
+            return Response(
+            search_result="Necessário adicioanar dados no DB antes de realizar query", source=[], chunks=[]
+            )
+        query_engine = self.create_engine(self.index, query.similarity_top_k)
+
+        response = query_engine.query(query.query)
+        response_object = Response(
+            search_result=str(response).strip(), source=[response.metadata[k]["file_path"] for k in response.metadata.keys()],
+                                                            chunks=[x.text for x in response.source_nodes])
+    
+        return response_object
+    
+

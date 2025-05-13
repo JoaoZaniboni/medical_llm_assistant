@@ -1,0 +1,184 @@
+{
+    "examples": [
+        {
+            "query": "Posso desenvolver uma infec\u00e7\u00e3o de estreptococo em vez de um v\u00edrus se a minha garganta est\u00e1 dorida?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: throat a bit sore and want to get a good imune booster, especially in light of the virus. please advise. have not been in contact with nyone with the virus.\ndoctor: during this pandemic. throat pain can be from a strep throat infection (antibiotics needed), a cold or influenza or other virus, or from some other cause such as allergies or irritants. usually, a person sees the doctor (call first) if the sore throat is bothersome, recurrent, or doesn't go away quickly. covid-19 infections tend to have cough, whereas strep throat usually lacks cough but has more throat pain. (3/21/20)"
+            ],
+            "reference_answer": "Sim, \u00e9 poss\u00edvel. Se voc\u00ea tiver uma dor de garganta, \u00e9 importante procurar atendimento m\u00e9dico para que possamos descartar as causas mais comuns. A falta de tosse n\u00e3o significa necessariamente que seja um estreptococo, pois existem outras causas como alergias ou irritantes. Al\u00e9m disso, a pandemia do coronav\u00edrus \u00e9 um fator importante para considerarmos.",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Voc\u00ea acredita que eu seja um suspeito de covid19?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: hey there i have had cold \"symptoms\" for over a week and had a low grade fever last week. for the past two days i have been feeling dizzy. should i contact my dr? should i see a dr\ndoctor: yes. protection. it is not enough symptoms to say that you are a suspect case of covid19; but, independently of this, if you have been in contact with a case, or you present persistent cough (with or without sputum), shortness of breath, wheezing, or you have a chronic disease like diabetes, hypertension, low immune system or cancer, should ask for medical attention. and use all the protection measures."
+            ],
+            "reference_answer": "N\u00e3o \u00e9 poss\u00edvel ter uma conclus\u00e3o com base apenas nas suas descri\u00e7\u00f5es de sintomas. Por\u00e9m, \u00e9 importante verificar se voc\u00ea tem algum dos seguintes sinais e sintomas: febre, dor de cabe\u00e7a, tosse, cansa\u00e7o, falta de apetite, ou outros problemas respirat\u00f3rios como dificuldade para respirar. Al\u00e9m disso, tamb\u00e9m \u00e9 essencial considerar se voc\u00ea teve contato com algu\u00e9m que tenha sido diagnosticado positivo ao v\u00edrus. Se apresentar alguns desses sinais e sintomas, ou se tiver tido contato com algu\u00e9m infectado, eu recomendaria procurar atendimento m\u00e9dico para uma avalia\u00e7\u00e3o mais detalhada.",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Ser\u00e1 que eu n\u00e3o tenho a temperatura alta e ainda assim posso ter o coronav\u00edrus?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: i have a tight and painful chest with a dry cough, no fever and no headaches. could it possibly be coronavirus?\ndoctor: possible. top symptoms include fever, dry cough and sob. an obvious possibility. if so, your best step is to self-quarntine. remember at your age low risk of complication and typically will pass without issue. if worsening sob be seen. call your provider or check with local health department. these are healthtap guidelines:https://www.healthtap.com/blog/covid-19-care-guidelines/self-quarantine-guide."
+            ],
+            "reference_answer": "Sim, \u00e9 poss\u00edvel. Os sintomas principais incluem febre, tosse seca e falta de ar (sibila\u00e7\u00e3o). \u00c9 uma possibilidade \u00f3bvia. Se for isso, sua melhor medida \u00e9 se isolante-se em casa. Lembre-se que, na sua idade, o risco de complica\u00e7\u00f5es \u00e9 baixo e geralmente passar\u00e1 sem problemas. Se a tosse se tornar pior, entre em contato conosco ou com as autoridades de sa\u00fade local. Estes s\u00e3o os guias da HealthTap: https://www.healthtap.com.br/blog/covid-19-guidelines/como-cuidar-de-si-mesmo-em-quarentena/",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Como \u00e9 que eu ficarei infectante logo no in\u00edcio da doen\u00e7a?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: what will happen after the incubation period for covid 19?\ndoctor: in brief: symptoms if you are infected, symptoms will emerge: tiredness, dry cough, fever worsening over 5-14 days. you will also become more infective so self-isolation and good hygiene are vital.only be concerned about covid-19 if: - you have been in contact with someone with a conformed diagnosis of covid-19 - you have visited a high risk area - symptoms worsen and include persistent fever and dry cough would you like to video or text chat with me?"
+            ],
+            "reference_answer": "Voc\u00ea se tornar\u00e1 mais contagioso cerca de 5-14 dias ap\u00f3s o contato com a doen\u00e7a. Isso ocorre quando voc\u00ea come\u00e7a a apresentar sintomas, como fadiga e febre. \u00c9 importante seguir as regras de isolamento social e higiene para evitar a propaga\u00e7\u00e3o da doen\u00e7a.",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "O que pode acontecer se eu n\u00e3o for ao m\u00e9dico logo e n\u00e3o come\u00e7ar os antibi\u00f3ticos para o pneumonia?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: just found out i was pregnant. yesterday diagnosed with pneumonia. i am a high risk pregnancy. fertility issues, pcos, weak cervix. delivered first daughter at 29 weeks, miscarried, and gave birth at 38 weeks to second daughter, but was on bedrest for weak cervix beginning at 5 months. i m a wreck. when i miscarried they said my progesterone level is low which caused me to miscarry, and gave me progesterone shots every week. can t see doctor for two days.\ndoctor: thanks for your question on healthcare magic.i can understand your concern. pneumonia with pregnancy is always critical.antibiotics as early as possible is the treatment of choice for pneumonia. so better to immediately consult doctor and start antibiotics for pneumonia. drink plenty of fluids orally and keep yourself hydrated. with prompt and appropriate treatment, pneumonia can be cured easily. hope i have solved your query. i will be happy to help you further. wish you good health. thanks."
+            ],
+            "reference_answer": "Se voc\u00ea n\u00e3o for ao m\u00e9dico logo e n\u00e3o come\u00e7ar os antibi\u00f3ticos para a pneumonia em um cen\u00e1rio de gravidez, h\u00e1 riscos significativos. A pneumonia pode se tornar uma infec\u00e7\u00e3o mais grave, aumentando o risco de complica\u00e7\u00f5es graves para ambos o beb\u00ea e a m\u00e3e.\n\nAlgumas das poss\u00edveis consequ\u00eancias incluem:\n\n1. **Problemas respirat\u00f3rios**: A pneumonia pode levar \u00e0 falha respirat\u00f3ria, necessitando de suporte ventilat\u00f3rio, o que \u00e9 um grande estresse para o feto e aumenta os riscos durante a gravidez.\n\n2. **S\u00e9psis**: Em casos graves de pneumonia, h\u00e1 risco de desenvolvimento de s\u00e9psis, uma infec\u00e7\u00e3o generalizada no corpo que pode ser fatal se n\u00e3o tratada adequadamente.\n\n3. **C\u00e2ncer de c\u00e9rebro na gravidez e p\u00f3s-parto**: A pneumonia em gestantes tem sido associada a um maior risco de c\u00e2ncer de c\u00e9rebro tanto durante como ap\u00f3s a gravidez.\n\n4. **Dem\u00eancia puerperal (dem\u00eancia da m\u00e3e que acabou de dar \u00e0 luz)**: Embora seja mais comum nas mulheres que deram \u00e0 luz, \u00e9 poss\u00edvel o desenvolvimento dessa condi\u00e7\u00e3o em m\u00e3es que n\u00e3o tiveram um parto normal, e pode estar relacionada a infec\u00e7\u00f5es como a pneumonia.\n\n5. **Complica\u00e7\u00f5es durante a gravidez ou parto**: Infec\u00e7\u00f5es graves podem causar complica\u00e7\u00f5es no desenvolvimento fetal ou aumentar os riscos de cesariana, trabalho de parto prematuro, entre outros problemas obst\u00e9tricos.\n\n6. **Infec\u00e7\u00e3o na placenta (placentite)**: A pneumonia pode levar a infec\u00e7\u00f5es da placenta, o que \u00e9 extremamente perigoso para o beb\u00ea e a m\u00e3e.\n\n7. **Problemas de desenvolvimento fetal**: A exposi\u00e7\u00e3o prolongada ao fio de uma infec\u00e7\u00e3o grave como a pneumonia pode afetar o desenvolvimento do feto, levando a problemas neurol\u00f3gicos ou outros transtornos no beb\u00ea.\n\n8. **Perda puerperal (infec\u00e7\u00e3o na m\u00e3e ap\u00f3s o parto)**: Infec\u00e7\u00f5es graves em mulheres gr\u00e1vidas podem aumentar os riscos de infec\u00e7\u00f5es p\u00f3s-parto, que podem ser fatais se n\u00e3o tratadas adequadamente.\n\n\u00c9 crucial buscar atendimento m\u00e9dico imediatamente para iniciar o tratamento adequado e prevenir esses riscos.",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Como \u00e9 poss\u00edvel contrair o v\u00edrus se ele dissipou al\u00e9m de seis metros?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: can you contact coronavirus or any virus from the air? also, from talking to someone from a distance of beyond 6 feet. any info on airborne facts?\ndoctor: covid 19 is airborne. covid 19 is primarily an airborne acquired infection. the number of potentially infected viruses dissipate by 6 feet."
+            ],
+            "reference_answer": "Se voc\u00ea est\u00e1 perguntando como \u00e9 que a gente pode contrair o coronav\u00edrus, mesmo estando a mais de seis metros da pessoa contaminada, isso ocorre porque os pequenos got\u00edculas de saliva e secre\u00e7\u00f5es respirat\u00f3rias podem ser levados pelo ar em dire\u00e7\u00e3o a quem se encontra mais pr\u00f3ximo. E assim esses v\u00edrus podem causar infec\u00e7\u00e3o na nossa cavidade nasal ou pulm\u00f5es.",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Preciso ir ao hospital para fazer o teste contra a COVID-19 se eu estiver com diarreia e n\u00e3o tiver fome?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: i'm told that dirrhea is a symptom of covid 19. i have had it for 36 hours, no appetite. do i need to be tested and where? i'm in alberton.\ndoctor: diaree. no, treat the diaree with fluids and electrolytes, load with probioticslook out for fever,( take paracetamol) or other symptoms."
+            ],
+            "reference_answer": "N\u00e3o. Trate a diarreia com l\u00edquidos e eletr\u00f3litos, carregue-se de probi\u00f3ticos. Procure por febre (tomar paracetamol) ou outros sintomas.",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Aconselha-se aguardar o calend\u00e1rio de vacina\u00e7\u00e3o para o meu filho ou h\u00e1 algum procedimento diferente que posso seguir durante a pandemia?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: do i need to take my 10 month old son for his measles vaccinations now that it is due or can it wait until the coronavirus pandemic has calmed down as i dont want to expose him unnecessarily in clinics or hospitals.\ndoctor: in brief: wait for now wait for now, keep talking on this platform. stay safe. would you like to video or text chat with me?"
+            ],
+            "reference_answer": "Agora \u00e9 um momento dif\u00edcil, mas n\u00e3o \u00e9 uma raz\u00e3o para adiar as vacinas. \u00c9 importante lembrar que a gripe pode ser s\u00e9ria e mortal, especialmente em crian\u00e7as. Em vez de adiar o agendamento da vacina\u00e7\u00e3o, \u00e9 poss\u00edvel escolher uma consulta fora do hor\u00e1rio de pico de atendimento, quando houver menos pessoas no local.",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Que tipo de contato entre pacientes e profissionais de sa\u00fade \u00e9 considerado aerosol?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: my wife is a nurse in a gp practice, and although she has a mask and gloves etc, is that enough to protect her, if an infected patient with the virus was to come in to her?\ndoctor: nearly. need an n95 mask, gloves and gown as well as eye protection if in contact with aerosol, if working with truely negative she is safe, but we need more testing and to keep mildly ill with corona away from every body else."
+            ],
+            "reference_answer": "O contato com o paciente que apresenta sintomas respirat\u00f3rios.",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "O paciente tem pneumonia h\u00e1 um m\u00eas e est\u00e1 fazendo baixo grau de febre alguns dias depois de deixar o hospital?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: hi,got pneumonia,1month ago.had hemoptasis,positive blood culture x1.have been treated with erythromycin x5days,clindamycin x10 xays,then levaquin,x10days,and prednisone.i have been thru with medications for 5dags,but have had low grade temp(99) a couple of evenings since.i still feel horrible,but my np hasn t done anything since.i did contact my pulmanologist today,and waiting for response.is there anymore i can do?really don t want to go back to hospital.thank you\ndoctor: hello,go for vaccinations given below:- flu vaccine- staphylococcal vaccine - improve immunity do exercise daily and take citrus food. rule out diabetes.hope i have answered your query. let me know if i can assist you further.regards,dr. chandra shekhar"
+            ],
+            "reference_answer": "Infelizmente a resposta dada pelo m\u00e9dico n\u00e3o foi precisa. Aqui est\u00e1 uma poss\u00edvel resposta mais apropriada:\n\n\"Ol\u00e1, sinto muito ouvir que voc\u00ea ainda est\u00e1 sentindo-se mal ap\u00f3s a pneumonia h\u00e1 um m\u00eas e os antibi\u00f3ticos receitados. A baixa temperatura (99) alguns dias depois de deixar o hospital \u00e9 um problema s\u00e9rio.\n\nVou pedir que voc\u00ea fa\u00e7a um novo exame de cultura do sangue para verificar se houve uma infec\u00e7\u00e3o resistente aos antibi\u00f3ticos utilizados anteriormente.\n\nAl\u00e9m disso, vamos reavaliar seu quadro cl\u00ednico e considerar a possibilidade de uma complica\u00e7\u00e3o mais grave. Eu gostaria de pedir tamb\u00e9m que voc\u00ea seja examinado por um especialista em doen\u00e7as infecciosas para obter uma avalia\u00e7\u00e3o mais detalhada.\n\nVamos trabalhar juntos para encontrar a causa subjacente do seu quadro e encontrar um tratamento eficaz. N\u00e3o precisa voltar ao hospital, podemos fazer isso aqui comigo ou com o seu pulmonologista.\"",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Pode algu\u00e9m contrair COVID-19 sem apresentar sintomas?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: wanted to find out whether i should get tested for covid 19. had a slight fever last week wednesday, slight dry cough and extra phlegmy. symptoms are inconsistent though. i use the gautrain to get to work, was concerned that i could've been exposed.\ndoctor: symptoms. symptoms lasting for a week that are getting better sounds like process is resolving. covid testing would not be indicated. you should follow the following guidelines: https://www.healthtap.com/blog/covid-19-care-guidelines/preventing-covid-19."
+            ],
+            "reference_answer": "Sim, \u00e9 poss\u00edvel que algu\u00e9m adquira o v\u00edrus sem desenvolver qualquer sintoma aparente. Isso ocorre porque alguns casos s\u00e3o assintom\u00e1ticos ou leves. Se voc\u00ea tem contato pr\u00f3ximo a algu\u00e9m com suspeita de infec\u00e7\u00e3o por COVID-19, mantenha-se afastado por 7 dias em casa para evitar poss\u00edveis cont\u00e1gios.",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        },
+        {
+            "query": "Posso ter o v\u00edrus e ser al\u00e9rgico ao mesmo tempo?",
+            "query_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            },
+            "reference_contexts": [
+                "patient: ek het loop neus met slym hoes. moontlik allergie, hulle besig met verbouings by werk. ek het ook hoofpyn. so bang vir die virus?\ndoctor: slim kans van virus. as jou sluim is a gevolge van allergy die sluim is gewoonlike a bleek geel saam met ander symptome soos niesery em jikkerige neus.en daar is a noodlike kans da jy die volle allergiese gene het en dan sal jy ook lui van asthma, hoieoos and moontlik exzeem as a kind.om did die \"virus\" to wees waarvan jy moet bekomerd wees so jy ook 1. hoor koors , 2. droer hoes 3. seer keel and 4. erg hoofpyn he'"
+            ],
+            "reference_answer": "Sim, \u00e9 poss\u00edvel desenvolver sintomas de infec\u00e7\u00e3o viral e alergia ao mesmo tempo. \u00c9 importante que voc\u00ea v\u00e1 a um m\u00e9dico para avaliar os seus sintomas e obter orienta\u00e7\u00e3o adequada sobre como lidar com eles.",
+            "reference_answer_by": {
+                "model_name": "llama3.1",
+                "type": "ai"
+            }
+        }
+    ]
+}

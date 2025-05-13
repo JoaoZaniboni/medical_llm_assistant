@@ -1,0 +1,85 @@
+[
+    {
+        "description": "throat a bit sore and want to get a good imune booster, especially in light of the virus. please advise. have not been in contact with nyone with the virus.",
+        "utterances": [
+            "patient: throat a bit sore and want to get a good imune booster, especially in light of the virus. please advise. have not been in contact with nyone with the virus.",
+            "doctor: during this pandemic. throat pain can be from a strep throat infection (antibiotics needed), a cold or influenza or other virus, or from some other cause such as allergies or irritants. usually, a person sees the doctor (call first) if the sore throat is bothersome, recurrent, or doesn't go away quickly. covid-19 infections tend to have cough, whereas strep throat usually lacks cough but has more throat pain. (3/21/20)"
+        ]
+    },
+    {
+        "description": "hey there i have had cold \"symptoms\" for over a week and had a low grade fever last week. for the past two days i have been feeling dizzy. should i contact my dr? should i see a dr",
+        "utterances": [
+            "patient: hey there i have had cold \"symptoms\" for over a week and had a low grade fever last week. for the past two days i have been feeling dizzy. should i contact my dr? should i see a dr",
+            "doctor: yes. protection. it is not enough symptoms to say that you are a suspect case of covid19; but, independently of this, if you have been in contact with a case, or you present persistent cough (with or without sputum), shortness of breath, wheezing, or you have a chronic disease like diabetes, hypertension, low immune system or cancer, should ask for medical attention. and use all the protection measures."
+        ]
+    },
+    {
+        "description": "i have a tight and painful chest with a dry cough, no fever and no headaches. could it possibly be coronavirus?",
+        "utterances": [
+            "patient: i have a tight and painful chest with a dry cough, no fever and no headaches. could it possibly be coronavirus?",
+            "doctor: possible. top symptoms include fever, dry cough and sob. an obvious possibility. if so, your best step is to self-quarntine. remember at your age low risk of complication and typically will pass without issue. if worsening sob be seen. call your provider or check with local health department. these are healthtap guidelines:https://www.healthtap.com/blog/covid-19-care-guidelines/self-quarantine-guide."
+        ]
+    },
+    {
+        "description": "what will happen after the incubation period for covid 19?",
+        "utterances": [
+            "patient: what will happen after the incubation period for covid 19?",
+            "doctor: in brief: symptoms if you are infected, symptoms will emerge: tiredness, dry cough, fever worsening over 5-14 days. you will also become more infective so self-isolation and good hygiene are vital.only be concerned about covid-19 if: - you have been in contact with someone with a conformed diagnosis of covid-19 - you have visited a high risk area - symptoms worsen and include persistent fever and dry cough would you like to video or text chat with me?"
+        ]
+    },
+    {
+        "description": "suggest treatment for pneumonia",
+        "utterances": [
+            "patient: just found out i was pregnant. yesterday diagnosed with pneumonia. i am a high risk pregnancy. fertility issues, pcos, weak cervix. delivered first daughter at 29 weeks, miscarried, and gave birth at 38 weeks to second daughter, but was on bedrest for weak cervix beginning at 5 months. i m a wreck. when i miscarried they said my progesterone level is low which caused me to miscarry, and gave me progesterone shots every week. can t see doctor for two days.",
+            "doctor: thanks for your question on healthcare magic.i can understand your concern. pneumonia with pregnancy is always critical.antibiotics as early as possible is the treatment of choice for pneumonia. so better to immediately consult doctor and start antibiotics for pneumonia. drink plenty of fluids orally and keep yourself hydrated. with prompt and appropriate treatment, pneumonia can be cured easily. hope i have solved your query. i will be happy to help you further. wish you good health. thanks."
+        ]
+    },
+    {
+        "description": "can you contact coronavirus or any virus from the air? also, from talking to someone from a distance of beyond 6 feet. any info on airborne facts?",
+        "utterances": [
+            "patient: can you contact coronavirus or any virus from the air? also, from talking to someone from a distance of beyond 6 feet. any info on airborne facts?",
+            "doctor: covid 19 is airborne. covid 19 is primarily an airborne acquired infection. the number of potentially infected viruses dissipate by 6 feet."
+        ]
+    },
+    {
+        "description": "i'm told that dirrhea is a symptom of covid 19. i have had it for 36 hours, no appetite. do i need to be tested and where? i'm in alberton.",
+        "utterances": [
+            "patient: i'm told that dirrhea is a symptom of covid 19. i have had it for 36 hours, no appetite. do i need to be tested and where? i'm in alberton.",
+            "doctor: diaree. no, treat the diaree with fluids and electrolytes, load with probioticslook out for fever,( take paracetamol) or other symptoms."
+        ]
+    },
+    {
+        "description": "do i need to take my 10 month old son for his measles vaccinations now that it is due or can it wait until the coronavirus pandemic has calmed down as i dont want to expose him unnecessarily in clinics or hospitals.",
+        "utterances": [
+            "patient: do i need to take my 10 month old son for his measles vaccinations now that it is due or can it wait until the coronavirus pandemic has calmed down as i dont want to expose him unnecessarily in clinics or hospitals.",
+            "doctor: in brief: wait for now wait for now, keep talking on this platform. stay safe. would you like to video or text chat with me?"
+        ]
+    },
+    {
+        "description": "my wife is a nurse in a gp practice, and although she has a mask and gloves etc, is that enough to protect her, if an infected patient with the virus was to come in to her?",
+        "utterances": [
+            "patient: my wife is a nurse in a gp practice, and although she has a mask and gloves etc, is that enough to protect her, if an infected patient with the virus was to come in to her?",
+            "doctor: nearly. need an n95 mask, gloves and gown as well as eye protection if in contact with aerosol, if working with truely negative she is safe, but we need more testing and to keep mildly ill with corona away from every body else."
+        ]
+    },
+    {
+        "description": "suggest treatment for low grade fever despite taking medication for pneumonia",
+        "utterances": [
+            "patient: hi,got pneumonia,1month ago.had hemoptasis,positive blood culture x1.have been treated with erythromycin x5days,clindamycin x10 xays,then levaquin,x10days,and prednisone.i have been thru with medications for 5dags,but have had low grade temp(99) a couple of evenings since.i still feel horrible,but my np hasn t done anything since.i did contact my pulmanologist today,and waiting for response.is there anymore i can do?really don t want to go back to hospital.thank you",
+            "doctor: hello,go for vaccinations given below:- flu vaccine- staphylococcal vaccine - improve immunity do exercise daily and take citrus food. rule out diabetes.hope i have answered your query. let me know if i can assist you further.regards,dr. chandra shekhar"
+        ]
+    },
+    {
+        "description": "wanted to find out whether i should get tested for covid 19. had a slight fever last week wednesday, slight dry cough and extra phlegmy. symptoms are inconsistent though. i use the gautrain to get to work, was concerned that i could've been exposed.",
+        "utterances": [
+            "patient: wanted to find out whether i should get tested for covid 19. had a slight fever last week wednesday, slight dry cough and extra phlegmy. symptoms are inconsistent though. i use the gautrain to get to work, was concerned that i could've been exposed.",
+            "doctor: symptoms. symptoms lasting for a week that are getting better sounds like process is resolving. covid testing would not be indicated. you should follow the following guidelines: https://www.healthtap.com/blog/covid-19-care-guidelines/preventing-covid-19."
+        ]
+    },
+    {
+        "description": "ek het loop neus met slym hoes. moontlik allergie, hulle besig met verbouings by werk. ek het ook hoofpyn. so bang vir die virus?",
+        "utterances": [
+            "patient: ek het loop neus met slym hoes. moontlik allergie, hulle besig met verbouings by werk. ek het ook hoofpyn. so bang vir die virus?",
+            "doctor: slim kans van virus. as jou sluim is a gevolge van allergy die sluim is gewoonlike a bleek geel saam met ander symptome soos niesery em jikkerige neus.en daar is a noodlike kans da jy die volle allergiese gene het en dan sal jy ook lui van asthma, hoieoos and moontlik exzeem as a kind.om did die \"virus\" to wees waarvan jy moet bekomerd wees so jy ook 1. hoor koors , 2. droer hoes 3. seer keel and 4. erg hoofpyn he'"
+        ]
+    }]

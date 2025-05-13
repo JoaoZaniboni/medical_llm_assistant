@@ -1,0 +1,17 @@
+services:
+  qdrant:
+    image: qdrant/qdrant # Specifies the Qdrant image to use
+    container_name: qdrant # Sets the container name to qdrant
+    ports:
+      - "6333:6333" # Maps port 6333 on the host to port 6333 in the container
+    volumes:
+      - qdrant_data:/qdrant/storage # Mounts the qdrant_data volume to /qdrant/storage in the container
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+
+
+volumes:
+  qdrant_data: # Defines the qdrant_data volume
